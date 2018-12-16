@@ -5,8 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Enrora_Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Enrora Client" Height="450" Width="800">
     <Grid>
-        
+        <TabControl>
+            <TabItem Name="ServerTab" Header="Server">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="ServerIPInput" HorizontalAlignment="Left" Height="23" Margin="147,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button Name="ServerConnectButton" Content="Connect" HorizontalAlignment="Left" Margin="272,79,0,0" VerticalAlignment="Top" Width="52" Height="23"/>
+                    <Label Content="Server IP:" HorizontalAlignment="Left" Margin="147,48,0,0" VerticalAlignment="Top" Width="177"/>
+                    <Label Name="ServerConnectInfo" Content="" HorizontalAlignment="Left" Margin="147,107,0,0" VerticalAlignment="Top" Width="177"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="LoginTab" Header="Login">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="LoginUsernameEntry" HorizontalAlignment="Left" Height="23" Margin="298,99,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="151"/>
+                    <Button Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="454,99,0,0" VerticalAlignment="Top" Width="44" Height="23"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="RegisterTab" Header="Register">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Name="SystemTab" Header="System">
+                <Grid Background="#FFE5E5E5">
+                    <TabControl Margin="0,0,278,0">
+                        <TabItem Name="CampaignTab" Header="Campaign">
+                            <Grid Background="#FFE5E5E5"/>
+                        </TabItem>
+                        <TabItem Name="CharacterTab" Header="Character">
+                            <Grid Background="#FFE5E5E5"/>
+                        </TabItem>
+                    </TabControl>
+                    <TextBox Name="ChatBox" Margin="0,5,5,38" TextWrapping="Wrap" Text="Welcome to chat!" HorizontalAlignment="Right" Width="268"/>
+                    <TextBox Name="ChatEntry" HorizontalAlignment="Right" Margin="0,0,47,5" TextWrapping="Wrap" Width="226" Height="28" VerticalAlignment="Bottom"/>
+                    <Button Name="SendButton" Content="Send" Margin="0,0,5,5" HorizontalAlignment="Right" Width="37" Height="28" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
